@@ -19,6 +19,8 @@ pipeline {
                           userRemoteConfigs: [[url: 'https://github.com/jenkinsci/git-parameter-plugin.git']]
                         ])
                 echo 'Building...'
+                echo '---------------------------------------'
+                sh 'git status'
             }
         }
         stage('Test') {
