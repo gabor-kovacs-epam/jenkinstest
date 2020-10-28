@@ -2,11 +2,9 @@ pipeline {
     agent any
 
     parameters {
-        choice(
-                name: 'branch',
-                choices: env.BRANCH_NAME,
-                description: 'Branch to build'
-        )
+        gitParameter name: 'BRANCH_TAG', 
+                     type: 'PT_BRANCH_TAG',
+                     defaultValue: 'master'
     }
     
     stages {
