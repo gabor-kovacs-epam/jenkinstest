@@ -4,7 +4,7 @@ pipeline {
     parameters {
         choice(
                 name: 'branch',
-                choices: env.BRANCH_NAME
+                choices: env.BRANCH_NAME,
                 description: 'Branch to build'
         )
     }
