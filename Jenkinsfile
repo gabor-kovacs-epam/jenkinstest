@@ -1,6 +1,14 @@
 pipeline {
     agent any
 
+    parameters {
+        choice(
+                name: 'branch',
+                choices: env.BRANCH_NAME
+                description: 'Branch to build'
+        )
+    }
+    
     stages {
         stage('Build') {
             steps {
